@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPU(Graphics Processing Unit)</title>
+    <link rel="shorcut icon" href="./images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="./javascripts/javascripts.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Inconsolata:wght@500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div id="container">
+        <nav>
+            <div class="topnav" id="myTopnav">
+                <a href="#" class="active"></a>
+                <a href="#hero">Home</a>
+                <a href="#Introduction">Introduction</a>
+                <a href="#GPUs_types">Types of GPU</a>
+                <a href="#How_Work">How does it work?</a>
+                <a href="#DaughterMotherBoard">Interior Operation</a>
+                <a href="#Technology">Implemented technologies</a>
+                <a href="#Sli-vs-CrossFire">Sli vs CrossFire</a>
+                <a href="#GPU-vs-CPU">Differences between the core of a GPU and core of a CPU</a>
+                <a href="#Parts-of-GPU">What are the GPU components?</a>
+                <a href="#autor">Bio</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </nav>
+        <header>
+            <section id="hero">
+                <img src="images/ImagenPc(slider).png"/>
+            </section>
+        </header>
+        <section id="Introduction" >
+            <h2>What is it, what does it do and what is it for?</h2>
+            <div class="grid-1">
+                <div class="item-grid-1">
+                    <img src="images/gpu(introduccion).jpg"/>
+                </div>
+                <div class="item-grid-1">
+                <p>
+                    A graphics processing unit (GPU) is a coprocessor dedicated to graphics processing or floating point operations, to lighten the workload of the central processor/CPU in applications such as video games or interactive 3D applications. Thus, while much of the graphics-related work is processed on the GPU, the central processing unit (CPU) can be dedicated to other types of calculations (such as artificial intelligence or mechanical calculations in the case of video games).<br>
+                    <br>
+                    The GPU implements certain graphics operations called primitives optimized for graphics processing. One of the most common primitives for 3D graphics processing is anti-aliasing, which smoothes the edges of figures to give them a more realistic appearance. Additionally there are primitives for drawing rectangles, triangles, circles and arcs. GPUs currently have a large number of primitives, seeking greater realism in the effects).<br>
+                    <br>
+                    GPUs are present in graphics cards.<br>
+                </p>
+            </div>
+        </div>
+        </section>
+        <section id="GPUs_types">
+            <h2>Types of GPU</h2>
+            <div class="grid-2">
+                <div class="item-grid-2">
+                    <h3>Integrated cards</h3>
+                    <img src="./images/APU-Ryzen(GPUsTypes).jpg" alt="APU-Ryzen">
+                    <p>These can be found both integrated in the board and in the processor itself, which is why they use the system memory to develop their operation. They have a section exclusively dedicated to graphics, it has a different architecture, designed exclusively to generate these pixel images.</p>
+                </div>
+                <div class="item-grid-2">
+                    <h3>Dedicated cards</h3>
+                    <img src="./images/Tarjeta-grafica-dedicada(GPUsTypes).jpg" alt="Tarjeta-grafica-dedicada-Nvidia" ;>
+                    <p>This type of graphic unit has a series of specific functions assigned to it and is designed to expressly fulfill them. Its main characteristic is that it has a RAM memory independent from that of the computer.<br>
+                    <br>
+                    The dedicated graphics card is on a daughterboard (put a picture explaining parts of the graphics, VRM, where the power comes from etc).
+                    </p>
+                </div>
+            </div>
+
+        </section>
+        <section id="How_Work">
+            <h2>How does it work?</h2>
+            <div class="grid-3">
+                <div class="item-grid-3">
+                <img src="./images/schemeHowWorkGPU.png" alt="scheme-How-Work-GPU">
+                </div>
+                <div class="item-grid-3">
+                <p>
+                    The processor sends it the order to generate an image, and this is responsible for taking out the pixel matrix that sends through the HDMI, VGA, DVI or Displayport cable to the monitor at a specific frequency (usually 60 images per second).<br>
+                </p>
+                <p>
+                    When we want to do something more like playing video games, in which we have polygonal images that are transformed into flat images and displayed on the screen, or for example special 3D design programs, special effects or video editing that are things that will need a little more power than we can give us the integrated graphics we have in the processor. <br>
+                </p>
+        
+                
+                </div>
+            </div>
+
+            <div id="DaughterMotherBoard">
+                <h3>Interior Operation</h3>
+                <img src="./images/GPU(HowWork).jpg" alt="GPU(HowWork)">
+                <br>
+                <br>
+                <br>
+                <button class="Btn1" id="myBtn">Read more</button> 
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                        <dl>
+                            <dt>8-pin plug.</dt>
+                            <dd>Extra power is supplied to the board from this pin.</dd>
+                            <dt>VRAM</dt>
+                            <dd>It is the GPU RAM and is soldered to the board, not the main memory.</dd>
+                            <dt>Graphic Proccessor</dt>
+                            <dd>It is the brain or core of the graphics card.</dd>
+                            <dt>PCI Express Socket</dt>
+                            <dd>It is a standard type of bus for connecting internal devices in a computer.</dd>
+                            <dt>VRM or voltage regulator module</dt>
+                            <dd>Stabilize the DC voltages used by the processor and other elements.</dd>
+                            <dt>Video Ports</dt>
+                            <dd>Allows you to connect two devices together allowing the transfer of images and stereo sound (depending on the connector used).</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="Technology">
+            <br>
+            <h2>GPU Implemented Technologies</h2>
+            <div id="Shaders">
+                <h3>The Shader technology</h3>
+                <br>
+                <div id="shadersParagraph1">
+                    <p>
+                        Shaders are a special type of program that runs on graphics processing units (GPUs).
+                    </p>
+                </div>
+                <br>
+                <img src="./images/shaderExample.png" alt="shaderExample">
+                <br>
+                <p>
+                    The output of the shader is the colored pixels of the object drawn in the viewport. Some shaders allow specialized outputs (especially with APIs like Vulkan). The standard process is the "vertex -> frgament" shader channel. The vertex shader is used to calculate where each vertex (a point in a 3D model) is located and the fragment shader calculates the color of the individual pixels.
+                </p>
+        <div class="grid-4">
+            <div class="item-grid-4">
+                <h3>AntiLiasing Technology</h3>
+                <p>
+                    Anti-Aliasing is nothing more than a post-processing filter, and therefore performed after generating the image, which smoothes these sawtooths so that lines that are not vertical or horizontal appear more homogeneous, eliminating or at least mitigating this step effect.
+                
+                <br>
+                <br>
+                    If we have a high-end computer, with a good graphics card, we can use SSAA or MSAA as antialiasing. These are the most widespread and the ones that will give us the best quality in the graphics that we have closer to the screen.
+                </p>
+                <img src="./images/Examples-TypesAntialiasing.png" alt="Types-Antialiasing">
+            </div>
+            <div class="item-grid-4">
+                <h3>Raytraicing technology or RTX</h3>
+                <p>
+                    Ray tracing is a technology developed by NVIDIA that is responsible for improving the lighting, shadows and reflections of video games. In English, ray tracing means "ray tracing" and refers to a much more precise calculation of in-game lighting that impacts reflections and shadows. 
+                    <br>
+                    With this algorithm, the scenes look much more realistic, which is why it has been a revolution for the gamer community.
+                    <br>
+                    <br>
+                    NVIDIA began developing the technology several years ago, but it wasn't until 2018 that its first cards with ray tracing came out.It's very easy to recognize the graphics cards that have this algorithm because the company changed the nomenclature so that now its acronym is RTX.
+                </p>
+                <img src="./images/RTX-Example.png" alt="RTX-Comparation">
+            </div>
+        </div>
+        <br>
+        <br>
+        <iframe id="videoYoutube" src="https://www.youtube.com/embed/tbsudki8Sro" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
+        </section>
+        <section id="Sli-vs-CrossFire">
+            <h2>Sli vs CrossFire</h2>
+            <p>
+                These are two tools that were created for use with NVIDIA and AMD respectively and have their origins in the multiGPU configurations used with Voodoo 2.
+                <br>
+                <br>
+                SLI, which stands for Scan Line Interleave, works in a simple way, using two cards in parallel with a 50/50 workload balance that even allows splitting the screen in two.
+                <br>
+                <br>
+                It is a bit of an old tool, which required doubling the rendering power, leaving out the memory for textures because each graphics card requires duplicating the data of the space in which it is performing.
+                <br>
+                SLI mode is currently used by NVIDIA graphics solutions, while CrossFire is used by AMD as mentioned above. Specifically, both terms refer to a mode of use of two or more graphics cards that are placed to work together and simultaneously on the same computer or system. Currently these technologies are almost in disuse because now the graphics cards are so powerful that it is not necessary to use it, plus many programs and games no longer implement this technology.
+                <br>
+                <br>
+                Where we can see that it is still being used is in cryptocurrency mining stations.
+            </p>
+            <img src="./images/SLI-tarjetas-nvidia.png" alt="SLI-tarjetas-nvidia">
+        </section>
+        <br>
+        <br>
+        <section id="GPU-vs-CPU">
+            <div>
+                <h2>
+                    Differences between the core of a GPU and core of a CPU
+                </h2>
+                <img src="./images/CPU-and-GPU-comparative.png" alt="CPU-and-GPU-comparative.png">
+                <p>
+                    The main difference is that CPUs are primarily designed for instruction-level parallelism, while GPUs specialize in thread-level parallelism.
+                    <br>
+                    <br>
+                    Instruction-level parallelism seeks to reduce the instruction time of a program by executing several program instructions simultaneously. Kernels based on thread-level parallelism take several programs at the same time and execute them in parallel.
+                </p>
+                
+                <h3>
+                    How the CUDA cores work.
+                </h3>
+                <iframe src="https://www.youtube.com/embed/YXm7nilxSPs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+        <section id="Parts-of-GPU">
+            <h2>
+                What are the GPU components?
+            </h2>
+            <p>
+                There are a number of common elements used by both NVIDIA GPUs and AMD GPUs that are essential for a GPU to do its job.
+            </p>
+            <dl>
+                <dt>SM or Compute Units:</dt>
+                <dd>NVIDIA uses the former, AMD the latter. Each unit integrates a set of shader engines, texture units, raster units and, depending on the architecture, specialized cores for ray tracing and artificial intelligence. They are the foundation of any GPU.</dd>
+                <br>
+                <dt>Shader engines:</dt>
+                <dd>Also known as shaders. They are responsible for performing the workload associated with tasks as important as the transformation of geometry, both at the level of color and shading and other effects (lighting, haze, reflections, etc.).</dd>
+                <br>
+                <dt>Raster units:</dt>
+                <dd>Better known as ROPs. They perform the process necessary for an image to be converted into a set of perfectly ordered pixels that are written to the framebuffer, from which they will be transmitted directly to the screen. They also perform important operations associated with the application of filters and smoothing techniques (MSAA, for example).</dd>
+                <br>
+                <dt>Texturizing units:</dt>
+                <dd>These are concerned with applying texture mapping to the geometry.</dd>
+                <br>
+                <dt>RT cores:</dt>
+                <dd>Dedicated to speed up the processing of ray tracing related workload. These kernels were introduced in 2018, and focus on calculating BVH transverse intersections, ray-delta intersections and to frame delimiter intersections.</dd>
+                <br>
+                <dt>Tensor cores:</dt>
+                <dd>These cores are also relatively new. They are only used in NVIDIA graphics cards based on the Volta, Turing and Ampere architectures. They are specialized for workloads focused on inference, artificial intelligence and deep learning. In gaming, they handle the workload of applying DLSS 2.0.</dd>
+                <br>
+                <dt>Memory bus:</dt>
+                <dd>The memory bus determines the width available for the GPU to communicate with the graphics memory.</dd>
+                <br>
+                <dt>Graphic memory:</dt>
+                <dd>It is not integrated into the GPU, but it plays a very important role. Its function is, in essence, very similar to that of RAM with respect to the CPU. The GPU uses VRAM to store certain graphic elements and data that it has already processed, so that it can call them up when it needs them without having to process them again. An insufficient amount of graphics memory can limit the performance of a GPU, and its operating frequency also has an impact, as slower graphics memory offers lower access (write and read) speeds.</dd>
+                <br>
+            </dl>
+            <img src="./images/nucleo-GPU.png" alt="nucleo-GPU">
+            <br>
+            <br>
+        </section>
+        <section id="footer">
+            <footer id="autor" class="grid-6">
+                <div class="item-grid-6">
+                    <h3>Social Media</h3>
+                    <div id="Icons-Media">
+                    <a href="https://twitter.com/?lang=es" class="fa fa-twitter"></a>
+                    <a href="https://es.linkedin.com/" class="fa fa-linkedin"></a>
+                    <a href="https://www.youtube.com/?hl=es&gl=ES" class="fa fa-youtube"></a>
+                    <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+                    <a href="https://github.com/JoseAntonioBenitez" class="fa fa-github"></a>
+                    </div>
+                </div>
+                <div class="item-grid-6">
+                    <h3>Contact:</h3>
+                    <p>Discord: OffJoseph#4008</p>
+                    <p>E-mail: <br>bentiezruiz.joseantonio@gmail.com</p>
+                    <img src="" alt="">
+                </div>
+                <div  class="item-grid-6">
+                    <h3>Where I study:</h3>
+                    <iframe class="responsive-iframe"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12790.16691516158!2d-4.561460914716195!3d36.73356592939562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd72f1d06d8246c9%3A0xb6dccfba3e65a1f2!2sIES%20Campanillas-Edificio%20CITIC!5e0!3m2!1sen!2ses!4v1638729771699!5m2!1sen!2ses"  allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </footer>
+        </section>
+    </div>
+</body>
+<script>
+    var modal = document.getElementById("myModal");
+    var btn = document.getElementById("myBtn");
+    var span = document.getElementsByClassName("close")[0];
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+    window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+    }
+</script>
+</html>
